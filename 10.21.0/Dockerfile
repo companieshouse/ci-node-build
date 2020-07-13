@@ -18,4 +18,4 @@ RUN chmod 700 /root/.ssh/
 
 COPY config /root/.ssh/config
 
-ENTRYPOINT ["/bin/sh"]
+ENTRYPOINT ["/bin/bash"]
