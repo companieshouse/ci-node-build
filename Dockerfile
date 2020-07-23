@@ -7,12 +7,12 @@ RUN apk update && \
     git \
     make \
     openssh-client \
+    python3 \
     unzip \
-    zip \
-    python3
+    zip
 
-RUN ln -sf /usr/bin/python3 /usr/bin/python
 RUN ln -sf /bin/bash /bin/sh
+RUN ln -sf /usr/bin/python3 /usr/bin/python
 RUN sed -i 's/bin\/ash/bin\/bash/g' /etc/passwd
 
 ENTRYPOINT ["/bin/bash"]
