@@ -7,6 +7,7 @@ RUN apk update && \
     git \
     make \
     openssh-client \
+    pkgconfig \
     python3 \
     unzip \
     zip
