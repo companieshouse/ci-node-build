@@ -8,8 +8,10 @@ RUN apk update && \
     make \
     openssh-client \
     unzip \
-    zip
+    zip \
+    python3
 
+RUN ln -sf /usr/bin/python3 /usr/bin/python
 RUN ln -sf /bin/bash /bin/sh
 RUN sed -i 's/bin\/ash/bin\/bash/g' /etc/passwd
 
