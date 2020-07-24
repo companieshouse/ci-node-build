@@ -1,19 +1,12 @@
-FROM node:10-alpine
+FROM centos:8
 
-RUN apk update && \
-    apk upgrade --no-cache && \
-    apk add --no-cache \
-    bash \
+RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+
+RUN yum update -y && \
+    yum install -y  \
     git \
     make \
-    openssh-client \
-    pkgconfig \
-    python3 \
+    nodejs \
     unzip \
-    zip
-
-RUN ln -sf /bin/bash /bin/sh
-RUN ln -sf /usr/bin/python3 /usr/bin/python
-RUN sed -i 's/bin\/ash/bin\/bash/g' /etc/passwd
-
-ENTRYPOINT ["/bin/bash"]
+    zip && \
+    yum clean all
