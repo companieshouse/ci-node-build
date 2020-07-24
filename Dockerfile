@@ -8,6 +8,5 @@ RUN yum update -y && \
     make \
     nodejs \
     unzip \
-    zip
-
-RUN yum clean all
+    zip && \
+    yum clean all
