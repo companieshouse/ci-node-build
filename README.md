@@ -1,2 +1,2 @@
 # ci-node-build
-A Docker image for Node builds
+A Docker image for Node 14 builds
