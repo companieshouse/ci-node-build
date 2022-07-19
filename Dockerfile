@@ -1,7 +1,7 @@
 FROM centos:8
 
 RUN yum update -y && \
-    yum module install nodejs:14/development -y && \
+    yum module install nodejs:16/development -y && \
     yum install -y  \
     alsa-lib.x86_64 \
     atk.x86_64 \
@@ -32,4 +32,4 @@ RUN yum update -y && \
     xorg-x11-fonts-Type1 \
     xorg-x11-utils \
     zip && \
-    yum clean all
+    yum clean all \
