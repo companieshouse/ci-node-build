@@ -32,4 +32,4 @@ RUN yum update -y && \
     xorg-x11-fonts-Type1 \
     xorg-x11-utils \
     zip && \
-    yum clean all \
+    yum clean all
