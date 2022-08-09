@@ -1,8 +1,8 @@
 FROM amazonlinux:2
 
-
 RUN yum update -y && \
-    yum module install nodejs:16/development -y && \
+    curl --silent --location https://rpm.nodesource.com/setup_16.x  | bash - && \
+    yum -y install nodejs && \
     yum install -y  \
     alsa-lib.x86_64 \
     atk.x86_64 \
