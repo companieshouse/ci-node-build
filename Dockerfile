@@ -23,7 +23,6 @@ RUN yum update -y && \
     libXtst.x86_64 \
     make \
     nodejs \
-    nss \
     pango.x86_64 \
     unzip \
     xorg-x11-fonts-100dpi \
