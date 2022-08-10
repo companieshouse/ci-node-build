@@ -1,7 +1,7 @@
 FROM amazonlinux:2
 
+RUN curl --silent --location https://rpm.nodesource.com/setup_16.x  | bash - && \
 RUN yum update -y && \
-    curl --silent --location https://rpm.nodesource.com/setup_16.x  | bash - && \
     yum install -y  \
     alsa-lib.x86_64 \
     atk.x86_64 \
@@ -22,7 +22,6 @@ RUN yum update -y && \
     libXtst.x86_64 \
     make \
     nodejs \
-    nss \
     pango.x86_64 \
     unzip \
     xorg-x11-fonts-100dpi \
