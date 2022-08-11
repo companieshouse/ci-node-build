@@ -1,12 +1,7 @@
-FROM centos:8
+FROM amazonlinux:2
 
-
-RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-* && \
-    sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
-
-
+RUN curl --silent --location https://rpm.nodesource.com/setup_16.x  | bash -
 RUN yum update -y && \
-    yum module install nodejs:16/development -y && \
     yum install -y  \
     alsa-lib.x86_64 \
     atk.x86_64 \
@@ -27,7 +22,6 @@ RUN yum update -y && \
     libXtst.x86_64 \
     make \
     nodejs \
-    nss \
     pango.x86_64 \
     unzip \
     xorg-x11-fonts-100dpi \
