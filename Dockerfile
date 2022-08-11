@@ -1,7 +1,4 @@
-FROM centos:8
-
-RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-* && \
-    sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+FROM amazonlinux:2
 
 RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
 
@@ -26,7 +23,6 @@ RUN yum update -y && \
     libXtst.x86_64 \
     make \
     nodejs \
-    nss \
     pango.x86_64 \
     unzip \
     xorg-x11-fonts-100dpi \
