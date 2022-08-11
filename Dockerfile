@@ -1,6 +1,6 @@
 FROM amazonlinux:2
 
-RUN curl --silent --location https://rpm.nodesource.com/setup_14.x  | bash - && \
+RUN curl --silent --location https://rpm.nodesource.com/setup_14.x  | bash -
 RUN yum update -y && \
     yum install -y  \
     alsa-lib.x86_64 \
