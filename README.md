@@ -1,2 +1,2 @@
 # ci-node-build
-A Docker image for Node 16 builds
+A Docker image for Node 18 builds

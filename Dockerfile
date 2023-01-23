@@ -1,12 +1,10 @@
-FROM amazonlinux:2
+FROM amazonlinux:2022
 
-RUN curl --silent --location https://rpm.nodesource.com/setup_16.x  | bash -
-RUN yum update -y && \
-    yum install -y  \
+RUN dnf update -y && \
+    dnf install -y  \
     alsa-lib.x86_64 \
     atk.x86_64 \
     cups-libs.x86_64 \
-    GConf2.x86_64 \
     git \
     gtk3.x86_64 \
     libdrm \
@@ -31,4 +29,4 @@ RUN yum update -y && \
     xorg-x11-fonts-Type1 \
     xorg-x11-utils \
     zip && \
-    yum clean all
+    dnf clean all
