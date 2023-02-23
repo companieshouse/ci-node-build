@@ -5,6 +5,7 @@ RUN dnf update -y && \
     git \
     make \
     nodejs \
+    npm \
     unzip \
     zip && \
     dnf clean all
