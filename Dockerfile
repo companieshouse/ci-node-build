@@ -1,11 +1,7 @@
-FROM amazonlinux:2023
+FROM 416670754337.dkr.ecr.eu-west-2.amazonaws.com/ci-base-build:1.0.0
 
 RUN dnf update -y && \
     dnf install -y  \
-    git \
-    make \
     nodejs \
-    npm \
-    unzip \
-    zip && \
+    npm && \
     dnf clean all
