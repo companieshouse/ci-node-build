@@ -6,11 +6,14 @@ RUN yum update -y && \
     alsa-lib.x86_64 \
     atk.x86_64 \
     cups-libs.x86_64 \
+    gcc \
+    gcc-c++ \
     GConf2.x86_64 \
     git \
     gtk3.x86_64 \
     libdrm \
     libgbm \
+    libtiff-tools \
     libX11 \
     libXcomposite.x86_64 \
     libXcursor.x86_64 \
