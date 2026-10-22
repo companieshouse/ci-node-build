@@ -2,7 +2,7 @@ FROM 416670754337.dkr.ecr.eu-west-2.amazonaws.com/ci-base-build:1.0.5
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-ARG NODE_VERSION=24.1.0
+ARG NODE_VERSION=24.22.1
 
 RUN dnf update -y --releasever=latest ca-certificates && \
     update-ca-trust && \
