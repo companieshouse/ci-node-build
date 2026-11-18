@@ -11,6 +11,6 @@ RUN curl --silent --location https://rpm.nodesource.com/setup_24.x  | bash - && 
     which-2.21* && \
     dnf update -y && \
     dnf clean all
-    
+
 # Workaround pending release of amazonlinux:2023.12.20261117 to dockerhub
-RUN dnf update -y java-21-amazon-corretto --releasever 2023.12.20261117 
+RUN dnf update -y java-21-amazon-corretto-headless --releasever 2023.12.20261117
